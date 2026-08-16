@@ -123,7 +123,7 @@ const REFUND_POLICY = [
 export default function ProgramsPage() {
   return (
     <>
-      <section className="pt-20">
+      <section className="min-w-0 pt-20">
         <div className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
           <Image
             src="/course-graduation.jpg"
@@ -149,7 +149,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+      <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         <Reveal>
           <p className="max-w-2xl text-sm leading-relaxed text-[#57534a] md:text-base">
             An intensive training in Yogasanas and alignment, Pranayama,
@@ -169,7 +169,7 @@ export default function ProgramsPage() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 pb-16 md:px-10 md:pb-24">
+      <section className="mx-auto min-w-0 max-w-[1600px] px-6 pb-16 md:px-10 md:pb-24">
         <Reveal>
           <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
             What We Cover
@@ -189,7 +189,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
+      <section className="min-w-0 bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
@@ -220,7 +220,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-[#22201c] px-6 py-16 text-[#f7f4ee] md:px-10 md:py-24">
+      <section className="min-w-0 bg-[#22201c] px-6 py-16 text-[#f7f4ee] md:px-10 md:py-24">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#b8b2a2]">
@@ -296,7 +296,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section id="calendar" className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+      <section id="calendar" className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         <Reveal>
           <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
             Course Calendar
@@ -351,7 +351,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
+      <section className="min-w-0 bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
@@ -427,7 +427,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+      <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         <Reveal>
           <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
             Optional — Kriya Meditation Course
@@ -472,7 +472,7 @@ export default function ProgramsPage() {
         </Reveal>
       </section>
 
-      <section className="bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
+      <section className="min-w-0 bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1600px] grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20">
           <div>
             <Reveal>

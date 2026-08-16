@@ -33,7 +33,7 @@ export default async function CoursePage({
 
   return (
     <>
-      <section className="pt-20">
+      <section className="min-w-0 pt-20">
         <div className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
           <Image
             src={course.img}
@@ -59,7 +59,7 @@ export default async function CoursePage({
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+      <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         {getNextBatchLabel(course) && (
           <Reveal>
             <a
@@ -95,7 +95,7 @@ export default async function CoursePage({
       </section>
 
       {course.highlights.length > 0 && (
-        <section className="mx-auto max-w-[1600px] px-6 pb-16 md:px-10 md:pb-24">
+        <section className="mx-auto min-w-0 max-w-[1600px] px-6 pb-16 md:px-10 md:pb-24">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
               What We Cover
@@ -117,7 +117,7 @@ export default async function CoursePage({
       )}
 
       {course.secondaryImg && (
-        <section className="w-full">
+        <section className="min-w-0 w-full">
           <RevealImage className="relative h-[50vh] min-h-[320px] w-full bg-[#e7e2d6]">
             <Image
               src={course.secondaryImg}
@@ -174,7 +174,7 @@ export default async function CoursePage({
       )}
 
       {course.pricing.length > 0 && (
-        <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+        <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
               Course Fee
@@ -200,7 +200,7 @@ export default async function CoursePage({
         </section>
       )}
 
-      <section className="bg-[#22201c] px-6 py-16 text-[#f7f4ee] md:px-10 md:py-24">
+      <section className="min-w-0 bg-[#22201c] px-6 py-16 text-[#f7f4ee] md:px-10 md:py-24">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#b8b2a2]">

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-20">
+      <section className="min-w-0 pt-20">
         <div className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
           <Image
             src="/teacher-krishnaji-v2.jpg"
@@ -39,7 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
+      <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         <Reveal>
           <p className="max-w-2xl text-sm leading-relaxed text-[#57534a] md:text-base">
             &lsquo;Yoga&rsquo; is a much abused word. In truth, Yoga is
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="bg-[#22201c] px-6 py-20 text-[#f7f4ee] md:px-10 md:py-28">
+      <section className="min-w-0 bg-[#22201c] px-6 py-20 text-[#f7f4ee] md:px-10 md:py-28">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <p className="mb-6 text-xs tracking-widest-plus uppercase text-[#b8b2a2]">
