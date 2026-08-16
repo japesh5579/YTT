@@ -20,7 +20,7 @@ export default function FeatureCard({
 }: {
   img: string;
   alt: string;
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
   date?: string;
@@ -51,10 +51,12 @@ export default function FeatureCard({
           </span>
         )}
       </RevealImage>
-      <p className="mt-5 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
-        {eyebrow}
-      </p>
-      <h3 className="font-display mt-2 text-xl font-light md:text-2xl">{title}</h3>
+      {eyebrow && (
+        <p className="mt-5 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
+          {eyebrow}
+        </p>
+      )}
+      <h3 className={`font-display text-xl font-light md:text-2xl ${eyebrow ? "mt-2" : "mt-5"}`}>{title}</h3>
       <p className="mt-2 max-w-sm text-sm leading-relaxed text-[#57534a]">
         {description}
       </p>

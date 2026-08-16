@@ -126,12 +126,12 @@ export default function ProgramsPage() {
       <section className="min-w-0 pt-20">
         <div className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
           <Image
-            src="/course-graduation.jpg"
-            alt="Graduates of the Light House Yoga Teacher Training"
+            src="/programs-banner.jpg"
+            alt="Graduates of the Light House Yoga Teacher Training holding certificates"
             fill
             priority
             sizes="100vw"
-            className="img-subtle object-cover"
+            className="img-subtle object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 px-6 pb-10 md:px-10 md:pb-16">

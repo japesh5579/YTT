@@ -28,6 +28,7 @@ export default function FeaturedGrid() {
               date={getNextBatchLabel(course)}
               onClick={() => setOpenCourse(course)}
               applyHref={course.applyHref}
+              imgPositionClass={course.imgPositionClass}
               mediaClassName="relative aspect-[2/1] bg-[#e7e2d6]"
               imgSize={{ w: 1600, h: 800 }}
               sizes="560px"

@@ -41,7 +41,7 @@ export default async function CoursePage({
             fill
             priority
             sizes="100vw"
-            className="img-subtle object-cover"
+            className={`img-subtle object-cover ${course.imgPositionClass ?? ""}`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 px-6 pb-10 md:px-10 md:pb-16">
@@ -219,7 +219,7 @@ export default async function CoursePage({
                 All programmes
               </a>
               <a
-                href={course.applyHref ?? "/#reserve"}
+                href={course.applyHref ?? "mailto:lighthousekrishna@gmail.com"}
                 target={course.applyHref ? "_blank" : undefined}
                 rel={course.applyHref ? "noopener noreferrer" : undefined}
                 className="text-sm text-[#f7f4ee] underline decoration-[#f7f4ee]/40 underline-offset-4 transition-colors hover:decoration-[#f7f4ee]"

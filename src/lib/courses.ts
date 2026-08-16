@@ -4,6 +4,7 @@ export type Course = {
   alt: string;
   secondaryImg?: string;
   secondaryAlt?: string;
+  imgPositionClass?: string;
   eyebrow: string;
   title: string;
   /** Short, evergreen badge text — never a fixed date, since those go stale. */
@@ -57,6 +58,7 @@ export const COURSES: Course[] = [
     alt: "Graduates holding their Light House certificates",
     secondaryImg: "/course-workshop.jpg",
     secondaryAlt: "A wellness and stress-management workshop session at Light House",
+    imgPositionClass: "object-top",
     eyebrow: "Yoga Teacher Training",
     title: "100-Hour YTT",
     scheduleNote: "Batches Monthly",
@@ -93,10 +95,11 @@ export const COURSES: Course[] = [
   },
   {
     slug: "200-hour-ytt",
-    img: "/course-workshop.jpg",
-    alt: "A wellness and stress-management workshop session",
-    secondaryImg: "/course-graduation.jpg",
-    secondaryAlt: "Graduates holding their Light House certificates",
+    img: "/curriculum-asana.jpg",
+    alt: "Graduates holding their Certificate of Completion at Light House",
+    secondaryImg: "/course-graduation-2.jpg",
+    secondaryAlt: "Graduates holding their Light House certificates with marigold garlands",
+    imgPositionClass: "object-top",
     eyebrow: "Advanced Certification",
     title: "200-Hour YTT",
     scheduleNote: "Batches Monthly",
@@ -135,8 +138,9 @@ export const COURSES: Course[] = [
     slug: "15-day-retreat",
     img: "/course-meditation.jpg",
     alt: "Students in seated meditation at Light House",
-    secondaryImg: "/course-prayer.jpg",
-    secondaryAlt: "Evening prayer ceremony with marigold garlands at Light House",
+    secondaryImg: "/course-havan.jpg",
+    secondaryAlt: "A havan prayer ceremony with marigolds at Light House",
+    imgPositionClass: "object-top",
     eyebrow: "Retreat",
     title: "15-Day Yoga Retreat",
     scheduleNote: "Batches Monthly",
@@ -172,8 +176,9 @@ export const COURSES: Course[] = [
     slug: "20-day-retreat",
     img: "/course-prayer.jpg",
     alt: "Evening prayer ceremony with marigold garlands at Light House",
-    secondaryImg: "/course-meditation.jpg",
-    secondaryAlt: "Students in seated meditation at Light House",
+    secondaryImg: "/course-meditation-2.jpg",
+    secondaryAlt: "Students in a group meditation session at Light House",
+    imgPositionClass: "object-top",
     eyebrow: "Retreat",
     title: "20-Day Yoga Retreat",
     scheduleNote: "Batches Monthly",
@@ -235,8 +240,8 @@ export const COURSES: Course[] = [
     slug: "karma-yoga",
     img: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=80",
     alt: "A cove reachable by private tender at Isola Piana, Sardinia",
-    secondaryImg: "/course-workshop.jpg",
-    secondaryAlt: "A wellness and stress-management workshop session at Light House",
+    secondaryImg: "/karma-yoga-seva.jpg",
+    secondaryAlt: "A warm embrace between Krishnaji and a graduate at Light House",
     eyebrow: "Seva",
     title: "Karma Yoga at PANKH",
     stats: [

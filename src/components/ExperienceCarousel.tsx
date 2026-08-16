@@ -4,7 +4,7 @@ import FeatureCard from "./FeatureCard";
 type Item = {
   img: string;
   alt: string;
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
   href?: string;

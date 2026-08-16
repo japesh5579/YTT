@@ -3,7 +3,6 @@ import FeaturedGrid from "@/components/FeaturedGrid";
 import ExperienceCarousel from "@/components/ExperienceCarousel";
 import Teachers from "@/components/Teachers";
 import Accreditations from "@/components/Accreditations";
-import Newsletter from "@/components/Newsletter";
 
 const SEASONAL_ITEMS = [
   {
@@ -49,7 +48,6 @@ const WORLD_ITEMS = [
   {
     img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80",
     alt: "A private residence terrace at Vela Cove, Algarve",
-    eyebrow: "Highlight",
     title: "Dual Certification",
     description:
       "Graduate certified by both Yoga Alliance International and the World Yoga Federation.",
@@ -58,7 +56,6 @@ const WORLD_ITEMS = [
   {
     img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
     alt: "A timber pathway used for private transfers",
-    eyebrow: "Highlight",
     title: "Placement Assistance",
     description:
       "Structured support to help graduates find teaching opportunities after certification.",
@@ -67,7 +64,6 @@ const WORLD_ITEMS = [
   {
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
     alt: "A minimal stone and timber interior",
-    eyebrow: "Highlight",
     title: "Aura Healing & Meditation",
     description: "Guided sessions in aura healing, alongside daily dynamic meditation.",
     href: "#journal",
@@ -75,16 +71,14 @@ const WORLD_ITEMS = [
   {
     img: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1400&q=80",
     alt: "Coastline at Sable Point, Nova Scotia",
-    eyebrow: "Highlight",
     title: "Karma Yoga at PANKH",
     description:
       "Selfless service opportunities teaching and volunteering at the PANKH NGO school.",
-    href: "#reserve",
+    href: "mailto:lighthousekrishna@gmail.com",
   },
   {
     img: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1400&q=80",
     alt: "Forested hills near Kōra Hills, Nagano",
-    eyebrow: "Highlight",
     title: "Mantra Chanting & Prayers",
     description:
       "Evening prayers and mantra chanting sessions as part of the daily rhythm.",
@@ -109,7 +103,6 @@ export default function Home() {
         variant="centered"
       />
       <Accreditations />
-      <Newsletter />
     </>
   );
 }

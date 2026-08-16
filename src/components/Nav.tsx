@@ -10,7 +10,7 @@ const LEFT_LINKS = [
 
 const RIGHT_LINKS = [
   { label: "Philosophy", href: "/about" },
-  { label: "Apply", href: "/#reserve" },
+  { label: "Apply", href: "/programs" },
 ];
 
 export default function Nav() {
