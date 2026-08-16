@@ -39,7 +39,7 @@ export default function ExperienceCarousel({
   const { cardWidth, cardAspect } = PRESETS[variant];
 
   const cards = (
-    <div className="no-scrollbar flex min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain pb-2 pr-6 md:gap-[73px] md:pr-10">
+    <div className="no-scrollbar flex min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain touch-pan-x pb-2 pr-6 md:gap-[73px] md:pr-10">
       {items.map((item, i) => (
         <Reveal key={item.title} delay={(i % 3) * 100} className={`${cardWidth} shrink-0`}>
           <FeatureCard

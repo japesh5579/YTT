@@ -12,7 +12,7 @@ export default function FeaturedGrid() {
 
   return (
     <section id="destinations" className="min-w-0 pt-24 pb-16 md:pt-32 md:pb-20">
-      <div className="no-scrollbar flex min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain pb-2 pl-6 pr-6 md:gap-[73px] md:pl-10 md:pr-10">
+      <div className="no-scrollbar flex min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain touch-pan-x pb-2 pl-6 pr-6 md:gap-[73px] md:pl-10 md:pr-10">
         {COURSES.map((course, i) => (
           <Reveal
             key={course.slug}
