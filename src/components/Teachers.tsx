@@ -32,17 +32,19 @@ const TEACHERS = [
 
 export default function Teachers() {
   return (
-    <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-20">
-      <Reveal>
-        <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
-          Our Teachers
-        </p>
-        <h2 className="font-display max-w-lg text-3xl font-light leading-snug md:text-4xl">
-          Meet your teachers
-        </h2>
-      </Reveal>
+    <section className="min-w-0 py-16 md:py-20">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10">
+        <Reveal>
+          <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
+            Our Teachers
+          </p>
+          <h2 className="font-display max-w-lg text-3xl font-light leading-snug md:text-4xl">
+            Meet your teachers
+          </h2>
+        </Reveal>
+      </div>
 
-      <div className="no-scrollbar mt-12 flex min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain touch-pan-x pb-2 md:mt-16 md:gap-10">
+      <div className="no-scrollbar mx-auto mt-12 flex max-w-[1600px] min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain touch-pan-x pb-2 pl-6 pr-6 md:mt-16 md:gap-10 md:pl-10 md:pr-10">
         {TEACHERS.map((teacher, i) => (
           <Reveal
             key={teacher.name}
@@ -54,10 +56,11 @@ export default function Teachers() {
                 src={teacher.img}
                 alt={teacher.name}
                 fill
+                draggable={false}
                 sizes="(min-width: 768px) 25vw, 50vw"
                 placeholder="blur"
                 blurDataURL={shimmerPlaceholder(600, 600)}
-                className="img-subtle object-cover"
+                className="img-subtle object-cover select-none [-webkit-user-drag:none] [-webkit-touch-callout:none]"
               />
             </RevealImage>
             <h3 className="font-display mt-4 text-lg md:text-xl">{teacher.name}</h3>

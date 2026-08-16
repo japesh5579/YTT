@@ -42,10 +42,11 @@ export default function FeatureCard({
           src={img}
           alt={alt}
           fill
+          draggable={false}
           sizes={sizes}
           placeholder="blur"
           blurDataURL={shimmerPlaceholder(imgSize.w, imgSize.h)}
-          className={`img-subtle object-cover ${imgPositionClass} transition-transform duration-[1200ms] ease-out group-hover:scale-105`}
+          className={`img-subtle object-cover select-none [-webkit-user-drag:none] [-webkit-touch-callout:none] ${imgPositionClass} transition-transform duration-[1200ms] ease-out group-hover:scale-105`}
         />
         {date && (
           <span className="absolute left-4 top-4 z-10 bg-[#f7f4ee]/90 px-3 py-1.5 text-[10px] tracking-widest-plus uppercase text-[#22201c] backdrop-blur-sm">
