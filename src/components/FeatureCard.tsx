@@ -13,6 +13,7 @@ export default function FeatureCard({
   onClick,
   applyHref,
   linkLabel = "Discover more",
+  showLink = true,
   mediaClassName = "relative aspect-[4/5] bg-[#e7e2d6]",
   imgPositionClass = "object-center",
   imgSize = { w: 640, h: 800 },
@@ -28,6 +29,7 @@ export default function FeatureCard({
   onClick?: () => void;
   applyHref?: string;
   linkLabel?: string;
+  showLink?: boolean;
   mediaClassName?: string;
   imgPositionClass?: string;
   imgSize?: { w: number; h: number };
@@ -75,38 +77,41 @@ export default function FeatureCard({
         </a>
       )}
 
-      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-        {onClick ? (
-          <button
-            type="button"
-            onClick={onClick}
-            className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
-          >
-            {linkLabel}
-          </button>
-        ) : (
-          <a
-            href={href}
-            className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
-          >
-            {linkLabel}
-          </a>
-        )}
+      {(showLink || applyHref) && (
+        <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+          {showLink &&
+            (onClick ? (
+              <button
+                type="button"
+                onClick={onClick}
+                className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
+              >
+                {linkLabel}
+              </button>
+            ) : (
+              <a
+                href={href}
+                className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
+              >
+                {linkLabel}
+              </a>
+            ))}
 
-        {applyHref && (
-          <>
-            <span className="text-[#8a8375]/50">·</span>
-            <a
-              href={applyHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
-            >
-              Apply
-            </a>
-          </>
-        )}
-      </div>
+          {applyHref && (
+            <>
+              {showLink && <span className="text-[#8a8375]/50">·</span>}
+              <a
+                href={applyHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors group-hover:decoration-[#33456a]"
+              >
+                Apply
+              </a>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 }

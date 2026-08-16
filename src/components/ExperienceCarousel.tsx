@@ -49,6 +49,7 @@ export default function ExperienceCarousel({
             title={item.title}
             description={item.description}
             href={item.href}
+            showLink={variant !== "side"}
             imgPositionClass={item.imgPositionClass}
             mediaClassName={`relative ${cardAspect} bg-[#e7e2d6]`}
             imgSize={{ w: 800, h: 800 }}
