@@ -94,28 +94,6 @@ export default async function CoursePage({
         </div>
       </section>
 
-      {course.highlights.length > 0 && (
-        <section className="mx-auto min-w-0 max-w-[1600px] px-6 pb-16 md:px-10 md:pb-24">
-          <Reveal>
-            <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
-              What We Cover
-            </p>
-            <h2 className="font-display max-w-lg text-3xl font-light leading-snug md:text-4xl">
-              The curriculum
-            </h2>
-          </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-3 border-t border-[#22201c]/10 pt-10 sm:grid-cols-2 md:mt-14 md:pt-14">
-            {course.highlights.map((item, i) => (
-              <Reveal key={item} delay={(i % 6) * 60}>
-                <p className="border-b border-[#22201c]/10 pb-3 text-sm text-[#22201c]">
-                  {item}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-      )}
-
       {course.secondaryImg && (
         <section className="min-w-0 w-full">
           <RevealImage className="relative h-[50vh] min-h-[320px] w-full bg-[#e7e2d6]">
