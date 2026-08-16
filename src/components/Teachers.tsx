@@ -44,7 +44,7 @@ export default function Teachers() {
         </Reveal>
       </div>
 
-      <div className="no-scrollbar mx-auto mt-12 flex max-w-[1600px] min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain touch-pan-x pb-2 pl-6 pr-6 md:mt-16 md:gap-10 md:pl-10 md:pr-10">
+      <div className="no-scrollbar mx-auto mt-12 flex max-w-[1600px] min-w-0 items-start gap-8 overflow-x-auto overscroll-x-contain pb-2 pl-6 pr-6 md:mt-16 md:gap-10 md:pl-10 md:pr-10">
         {TEACHERS.map((teacher, i) => (
           <Reveal
             key={teacher.name}
