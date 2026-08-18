@@ -64,42 +64,6 @@ export default function WhyLighthouse() {
         </div>
       </section>
 
-      <section className="min-w-0 bg-[#efeadf] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto max-w-[1600px]">
-          <Reveal>
-            <p className="mb-4 text-xs tracking-widest-plus uppercase text-[#8a8375]">
-              Beyond YTT
-            </p>
-            <h2 className="font-display max-w-lg text-3xl font-light leading-snug md:text-4xl">
-              Other programmes
-            </h2>
-          </Reveal>
-
-          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 border-t border-[#22201c]/10 pt-10 sm:grid-cols-2 md:mt-14 md:pt-14">
-            <Reveal delay={100}>
-              <p className="text-[10px] tracking-widest-plus uppercase text-[#33456a]">
-                Wellness
-              </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#22201c]">
-                <li>One Week Stress Management and Wellness</li>
-                <li>Weekend Corporate Stress Management</li>
-                <li>One Week Corporate Stress Management</li>
-              </ul>
-            </Reveal>
-            <Reveal delay={150}>
-              <p className="text-[10px] tracking-widest-plus uppercase text-[#33456a]">
-                Volunteering
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-[#57534a]">
-                Karma Yoga at PANKH — teach and volunteer at our partner
-                NGO, PANKH – The Creative School, with food, accommodation
-                and optional wellness packages included.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       <section className="mx-auto min-w-0 max-w-[1600px] px-6 py-16 md:px-10 md:py-24">
         <Reveal>
           <p className="mb-6 text-xs tracking-widest-plus uppercase text-[#8a8375]">

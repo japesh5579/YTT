@@ -7,10 +7,10 @@ import { COURSES, groupScheduleByPeriod, type Course } from "@/lib/courses";
 import { getNextBatchLabel } from "@/lib/calendar";
 
 /** Display order and inclusion for the homepage only — /programs/[slug] is unaffected. */
-const HOMEPAGE_ORDER = ["200-hour-ytt", "100-hour-ytt", "20-day-retreat", "15-day-retreat"];
+const HOMEPAGE_ORDER = ["100-hour-ytt", "200-hour-ytt", "20-day-retreat", "15-day-retreat"];
 
 /** Courses whose schedule is a duplicate of another course's — skip re-rendering their timeline. */
-const SCHEDULE_HIDDEN_SLUGS = ["200-hour-ytt", "20-day-retreat"];
+const SCHEDULE_HIDDEN_SLUGS = ["100-hour-ytt", "20-day-retreat"];
 
 export default function CourseDetails() {
   const courses = HOMEPAGE_ORDER
@@ -21,7 +21,7 @@ export default function CourseDetails() {
     <section id="destinations" className="min-w-0 py-16 md:py-24">
       <Reveal className="mx-auto mb-14 flex max-w-[1600px] flex-col items-center px-6 text-center md:mb-20 md:px-10">
         <span className="mb-6 h-px w-16 bg-[#22201c]/25" />
-        <h2 className="font-display text-2xl font-light md:text-3xl">Full Course Details</h2>
+        <h2 className="font-display text-2xl font-light md:text-3xl">Course Details</h2>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-[#57534a]">
           Everything you need to know about each programme — curriculum, schedule, dates and fees.
         </p>

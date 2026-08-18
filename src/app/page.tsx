@@ -55,8 +55,8 @@ export default function Home() {
         description="Comprehensive instruction in Yogasanas and alignment, Yoga Anatomy, Pranayama, Mudras, Bandhas, and Yoga Philosophy."
         items={SEASONAL_ITEMS}
       />
-      <Teachers />
       <WhyLighthouse />
+      <Teachers />
       <Accreditations />
     </>
   );
