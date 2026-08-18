@@ -38,6 +38,17 @@ export default function CourseDetails() {
               className="scroll-mt-28 py-16 first:pt-0 md:py-20"
             >
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16">
+                <div className="md:hidden">
+                  {course.eyebrow && (
+                    <p className="text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
+                      {course.eyebrow}
+                    </p>
+                  )}
+                  <h3 className="font-display mt-2 text-2xl font-light">
+                    {course.title}
+                  </h3>
+                </div>
+
                 <RevealImage
                   className={`relative aspect-[4/3] bg-[#e7e2d6] ${course.imgPositionClass ?? ""}`}
                 >
@@ -58,14 +69,16 @@ export default function CourseDetails() {
                 </RevealImage>
 
                 <div>
-                  {course.eyebrow && (
-                    <p className="text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
-                      {course.eyebrow}
-                    </p>
-                  )}
-                  <h3 className="font-display mt-2 text-2xl font-light md:text-3xl">
-                    {course.title}
-                  </h3>
+                  <div className="hidden md:block">
+                    {course.eyebrow && (
+                      <p className="text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
+                        {course.eyebrow}
+                      </p>
+                    )}
+                    <h3 className="font-display mt-2 text-3xl font-light">
+                      {course.title}
+                    </h3>
+                  </div>
 
                   <div className="mt-4 space-y-4">
                     {course.paragraphs.map((p) => (
