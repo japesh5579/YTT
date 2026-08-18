@@ -110,8 +110,9 @@ export default function CourseDetails() {
                       </p>
                       <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
                         {course.highlights.map((h) => (
-                          <li key={h} className="text-sm text-[#22201c]">
-                            {h}
+                          <li key={h} className="flex items-start gap-2 text-sm text-[#22201c]">
+                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#33456a]" />
+                            <span>{h}</span>
                           </li>
                         ))}
                       </ul>
