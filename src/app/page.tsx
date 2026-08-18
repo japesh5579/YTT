@@ -1,7 +1,8 @@
 import Hero from "@/components/Hero";
-import FeaturedGrid from "@/components/FeaturedGrid";
+import CourseDetails from "@/components/CourseDetails";
 import ExperienceCarousel from "@/components/ExperienceCarousel";
 import Teachers from "@/components/Teachers";
+import WhyLighthouse from "@/components/WhyLighthouse";
 import Accreditations from "@/components/Accreditations";
 
 const SEASONAL_ITEMS = [
@@ -44,64 +45,18 @@ const SEASONAL_ITEMS = [
   },
 ];
 
-const WORLD_ITEMS = [
-  {
-    img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80",
-    alt: "A private residence terrace at Vela Cove, Algarve",
-    title: "Dual Certification",
-    description:
-      "Graduate certified by both Yoga Alliance International and the World Yoga Federation.",
-    href: "/programs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
-    alt: "A timber pathway used for private transfers",
-    title: "Placement Assistance",
-    description:
-      "Structured support to help graduates find teaching opportunities after certification.",
-    href: "/programs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
-    alt: "A minimal stone and timber interior",
-    title: "Aura Healing & Meditation",
-    description: "Guided sessions in aura healing, alongside daily dynamic meditation.",
-    href: "#journal",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1400&q=80",
-    alt: "Coastline at Sable Point, Nova Scotia",
-    title: "Karma Yoga at PANKH",
-    description:
-      "Selfless service opportunities teaching and volunteering at the PANKH NGO school.",
-    href: "mailto:lighthousekrishna@gmail.com",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1400&q=80",
-    alt: "Forested hills near Kōra Hills, Nagano",
-    title: "Mantra Chanting & Prayers",
-    description:
-      "Evening prayers and mantra chanting sessions as part of the daily rhythm.",
-    href: "#journal",
-  },
-];
-
 export default function Home() {
   return (
     <>
       <Hero />
-      <FeaturedGrid />
+      <CourseDetails />
       <ExperienceCarousel
         heading="The Curriculum"
         description="Comprehensive instruction in Yogasanas and alignment, Yoga Anatomy, Pranayama, Mudras, Bandhas, and Yoga Philosophy."
         items={SEASONAL_ITEMS}
       />
       <Teachers />
-      <ExperienceCarousel
-        heading="Why Lighthouse YTT"
-        items={WORLD_ITEMS}
-        variant="centered"
-      />
+      <WhyLighthouse />
       <Accreditations />
     </>
   );

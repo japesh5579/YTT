@@ -9,12 +9,14 @@ const TEACHERS = [
     role: "Founder — Krishnaji",
     bio: "Enlightened at the age of 36 and in meditation for over thirty years. Once a well-known actor — best remembered for playing Lord Krishna in Ramanand Sagar's Shri Krishna and Adi Shankaracharya in the National Award-winning film — he founded Light House to help others connect with the Divine Energy.",
     img: "/teacher-krishnaji-v2.jpg",
+    instagram: ["@krishnasarvadaman", "@krsnasarvadaman"],
   },
   {
     name: "Alankrita Banerjee",
     role: "Programme Director · Founder, PANKH",
     bio: "Founder of PANKH — The Creative School. Has conducted over 100 meditation and stress-management workshops for international groups, institutions and corporates, and authored five books on the philosophies of life. Specialises in Yogic Philosophy and Kundalini Yoga.",
     img: "/teacher-ankita.jpg",
+    instagram: ["@alankrita.banerjee.pankh"],
   },
   {
     name: "Rajat Purwal",
@@ -68,6 +70,11 @@ export default function Teachers() {
               {teacher.role}
             </p>
             <p className="mt-3 text-xs leading-relaxed text-[#57534a]">{teacher.bio}</p>
+            {teacher.instagram && (
+              <p className="mt-3 text-xs text-[#8a8375]">
+                {teacher.instagram.join(" · ")}
+              </p>
+            )}
           </Reveal>
         ))}
       </div>
