@@ -12,6 +12,13 @@ const HOMEPAGE_ORDER = ["100-hour-ytt", "200-hour-ytt", "20-day-retreat", "15-da
 /** Courses whose schedule is a duplicate of another course's — skip re-rendering their timeline. */
 const SCHEDULE_HIDDEN_SLUGS = ["100-hour-ytt", "20-day-retreat"];
 
+const PERIOD_ICON: Record<string, string> = {
+  Morning: "☀️",
+  Midday: "🌤️",
+  Afternoon: "🌇",
+  Evening: "🌙",
+};
+
 export default function CourseDetails() {
   const courses = HOMEPAGE_ORDER
     .map((slug) => COURSES.find((c) => c.slug === slug))
@@ -159,10 +166,11 @@ export default function CourseDetails() {
                   <h4 className="font-display max-w-lg text-xl font-light leading-snug md:text-2xl">
                     A day at Light House
                   </h4>
+
                   <div className="mt-6">
                     <Timeline
                       data={groupScheduleByPeriod(course.schedule).map((group) => ({
-                        title: group.period,
+                        title: `${PERIOD_ICON[group.period] ?? ""} ${group.period}`.trim(),
                         content: (
                           <div key={group.period} className="space-y-3">
                             {group.rows.map((row) => (
