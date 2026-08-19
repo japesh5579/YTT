@@ -70,7 +70,7 @@ export default function CourseDetails() {
                 </RevealImage>
 
                 <div>
-                  <div className="hidden md:block">
+                  <div className="hidden md:block md:text-center">
                     {course.eyebrow && (
                       <p className="text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
                         {course.eyebrow}
@@ -137,37 +137,37 @@ export default function CourseDetails() {
               </div>
 
               {course.highlights.length > 0 && (
-                <div className="mt-12 md:mt-16">
+                <div className="mt-12 md:mt-16 md:text-center">
                   <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
                     Covers
                   </p>
-                  <h4 className="font-display max-w-lg text-xl font-light leading-snug md:text-2xl">
+                  <h4 className="font-display max-w-lg text-xl font-light leading-snug md:mx-auto md:text-2xl">
                     What You&rsquo;ll Learn
                   </h4>
-                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a]">
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a] md:mx-auto">
                     A holistic curriculum that blends ancient yogic wisdom with modern
                     understanding, for transformation inside and out.
                   </p>
-                  <div className="mt-8 max-w-xl md:max-w-none">
+                  <div className="mt-8 max-w-xl text-left md:max-w-none">
                     <CoversCarousel items={course.highlights} />
                   </div>
                 </div>
               )}
 
               {showSchedule && course.schedule && (
-                <div className="mt-12 md:mt-16">
+                <div className="mt-12 md:mt-16 md:text-center">
                   <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
                     Daily Schedule
                   </p>
-                  <h4 className="font-display max-w-lg text-xl font-light leading-snug md:text-2xl">
+                  <h4 className="font-display max-w-lg text-xl font-light leading-snug md:mx-auto md:text-2xl">
                     A day at Light House
                   </h4>
-                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a]">
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a] md:mx-auto">
                     A balanced blend of ancient yogic wisdom and modern science for your
                     transformation.
                   </p>
 
-                  <div className="mt-8 max-w-2xl">
+                  <div className="mt-8 max-w-2xl text-left md:mx-auto">
                     <DailySchedule schedule={course.schedule} />
                   </div>
                 </div>

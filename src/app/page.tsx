@@ -3,6 +3,7 @@ import CourseDetails from "@/components/CourseDetails";
 import ExperienceCarousel from "@/components/ExperienceCarousel";
 import Teachers from "@/components/Teachers";
 import WhyLighthouse from "@/components/WhyLighthouse";
+import ProgrammeDirector from "@/components/ProgrammeDirector";
 import Accreditations from "@/components/Accreditations";
 
 const SEASONAL_ITEMS = [
@@ -57,6 +58,7 @@ export default function Home() {
       />
       <WhyLighthouse />
       <Teachers />
+      <ProgrammeDirector />
       <Accreditations />
     </>
   );

@@ -79,7 +79,7 @@ export default function DailySchedule({ schedule }: { schedule: NonNullable<Cour
                           i !== group.rows.length - 1 ? "border-b border-[#22201c]/10" : ""
                         }`}
                       >
-                        <span className="relative z-10 h-[11px] w-[11px] shrink-0 rounded-full border-2 border-[#f7f4ee] bg-[#33456a]" />
+                        <span className="relative z-10 h-[11px] w-[11px] shrink-0 rounded-full border-2 border-[#f7f4ee] bg-[#a9762d]" />
                         <span className="w-32 shrink-0 text-xs text-[#a9762d] sm:w-40">
                           {row.time}
                         </span>
