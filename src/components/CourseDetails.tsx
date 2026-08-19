@@ -128,7 +128,7 @@ export default function CourseDetails() {
                       href={course.applyHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-8 inline-block text-sm text-[#33456a] underline decoration-[#33456a]/40 underline-offset-4 transition-colors hover:decoration-[#33456a]"
+                      className="mt-8 inline-block border border-[#33456a] bg-transparent px-6 py-3 text-xs tracking-widest-plus uppercase text-[#33456a] transition-colors hover:bg-[#33456a] hover:text-[#f7f4ee]"
                     >
                       Apply
                     </a>

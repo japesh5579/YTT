@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SplashScreen from "@/components/SplashScreen";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#f7f4ee] text-[#22201c]">
+        <SplashScreen />
         <Nav />
         <div className="flex min-w-0 flex-1 flex-col overflow-x-clip">
           {children}
