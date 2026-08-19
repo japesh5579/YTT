@@ -30,11 +30,13 @@ export default function ExperienceCarousel({
   description,
   items,
   variant = "side",
+  id,
 }: {
   heading: string;
   description?: string;
   items: Item[];
   variant?: "side" | "centered";
+  id?: string;
 }) {
   const { cardWidth, cardAspect } = PRESETS[variant];
 
@@ -62,7 +64,7 @@ export default function ExperienceCarousel({
 
   if (variant === "centered") {
     return (
-      <section className="min-w-0 py-20 md:py-28">
+      <section id={id} className="min-w-0 scroll-mt-24 py-20 md:py-28">
         <Reveal className="mx-auto mb-12 flex max-w-[1600px] flex-col items-center px-6 text-center md:mb-16 md:px-10">
           <span className="mb-6 h-px w-16 bg-[#22201c]/25" />
           <h2 className="font-display text-2xl font-light md:text-3xl">{heading}</h2>
@@ -73,7 +75,7 @@ export default function ExperienceCarousel({
   }
 
   return (
-    <section className="min-w-0 py-16 md:py-20">
+    <section id={id} className="min-w-0 scroll-mt-24 py-16 md:py-20">
       <div className="grid grid-cols-1 gap-10 pl-6 md:gap-x-12 md:pl-10 lg:grid-cols-[360px_1fr]">
         <Reveal>
           <div>

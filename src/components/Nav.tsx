@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const LEFT_LINKS = [
   { label: "Courses", href: "/#destinations" },
-  { label: "Curriculum", href: "/#journal" },
+  { label: "Curriculum", href: "/#curriculum" },
 ];
 
 const RIGHT_LINKS = [
-  { label: "Philosophy", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Apply", href: "/programs" },
 ];
 

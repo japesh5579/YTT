@@ -35,11 +35,11 @@ export default function Footer() {
           <ul className="space-y-2 text-[#57534a]">
             <li>
               <a href="/about" className="transition-colors hover:text-[#22201c]">
-                Philosophy
+                About Us
               </a>
             </li>
             <li>
-              <a href="/#journal" className="transition-colors hover:text-[#22201c]">
+              <a href="/#curriculum" className="transition-colors hover:text-[#22201c]">
                 Curriculum
               </a>
             </li>

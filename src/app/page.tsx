@@ -52,6 +52,7 @@ export default function Home() {
       <Hero />
       <CourseDetails />
       <ExperienceCarousel
+        id="curriculum"
         heading="The Curriculum"
         description="Comprehensive instruction in Yogasanas and alignment, Yoga Anatomy, Pranayama, Mudras, Bandhas, and Yoga Philosophy."
         items={SEASONAL_ITEMS}
