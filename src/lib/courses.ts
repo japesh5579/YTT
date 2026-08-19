@@ -1,3 +1,29 @@
+/** Icon shown on each Covers card — keys map to lucide-react components in CoversCarousel. */
+export type HighlightIcon =
+  | "flower"
+  | "activity"
+  | "wind"
+  | "brain"
+  | "sparkles"
+  | "sun"
+  | "moon"
+  | "book"
+  | "hand-heart"
+  | "briefcase"
+  | "music"
+  | "leaf"
+  | "feather"
+  | "heart"
+  | "handshake"
+  | "home";
+
+export type Highlight = {
+  title: string;
+  description: string;
+  tags: [string, string, string, string];
+  icon: HighlightIcon;
+};
+
 export type Course = {
   slug: string;
   img: string;
@@ -13,7 +39,7 @@ export type Course = {
   batches?: { range: string; month: string; year: number; startDate: string }[];
   stats: { value: string; label: string }[];
   paragraphs: string[];
-  highlights: string[];
+  highlights: Highlight[];
   schedule?: { time: string; activity: string; period: string }[];
   pricing: { label: string; price: string }[];
   applyHref?: string;
@@ -76,12 +102,42 @@ export const COURSES: Course[] = [
       "We are affiliated to Yoga Alliance International and the World Yoga Federation. After successful completion, you can become a Certified Yoga Teacher (CYT).",
     ],
     highlights: [
-      "8-Limbed Ashtanga Yoga",
-      "Yoga Alignment",
-      "Pranayama and Shatkarma",
-      "Human Anatomy and Physiology",
-      "Self-healing with Sound and Aura Healing",
-      "Kriya Meditation / Cosmutation",
+      {
+        title: "8-Limbed Ashtanga Yoga",
+        description: "Learn the complete eight limbs of yoga for a balanced life.",
+        tags: ["Ancient Wisdom", "Holistic Practice", "Mind-Body Balance", "Inner Growth"],
+        icon: "flower",
+      },
+      {
+        title: "Yoga Alignment",
+        description: "Build a safe, precise foundation for every posture you'll teach.",
+        tags: ["Physical Strength", "Body Awareness", "Injury Prevention", "Precision"],
+        icon: "activity",
+      },
+      {
+        title: "Pranayama and Shatkarma",
+        description: "Master breath control and traditional cleansing techniques.",
+        tags: ["Breath Awareness", "Purification", "Vital Energy", "Ancient Wisdom"],
+        icon: "wind",
+      },
+      {
+        title: "Human Anatomy and Physiology",
+        description: "Understand the body's systems so you can teach safely and confidently.",
+        tags: ["Structured Learning", "Body Awareness", "Safety First", "Science-Backed"],
+        icon: "brain",
+      },
+      {
+        title: "Self-healing with Sound and Aura Healing",
+        description: "Explore vibrational and energetic practices for deep restoration.",
+        tags: ["Energetic Healing", "Sacred Knowledge", "Inner Growth", "Total Wellness"],
+        icon: "sparkles",
+      },
+      {
+        title: "Kriya Meditation / Cosmutation",
+        description: "Experience the spontaneous meditation technique unique to Light House.",
+        tags: ["Present Awareness", "Self-Discovery", "Inner Growth", "Sacred Knowledge"],
+        icon: "sun",
+      },
     ],
     schedule: YTT_SCHEDULE,
     pricing: [
@@ -117,12 +173,42 @@ export const COURSES: Course[] = [
       "Dual certification (Yoga Alliance International and World Yoga Federation) is available for this course, subject to an extra payment.",
     ],
     highlights: [
-      "Everything in the 100-Hour syllabus",
-      "6 Schools of Thought",
-      "Upanishads, Bhagavad Gita, Ashtavakra Gita",
-      "Introduction to Chakras and Kundalini",
-      "Massage and Cleansing",
-      "Placement assistance",
+      {
+        title: "Everything in the 100-Hour syllabus",
+        description: "Build directly on your foundational training, with no gaps in the syllabus.",
+        tags: ["Structured Learning", "Holistic Practice", "Ancient Wisdom", "Continuity"],
+        icon: "briefcase",
+      },
+      {
+        title: "6 Schools of Thought",
+        description: "Study the major philosophical schools underpinning yogic practice.",
+        tags: ["Sacred Knowledge", "Structured Learning", "Self-Discovery", "Ancient Wisdom"],
+        icon: "book",
+      },
+      {
+        title: "Upanishads, Bhagavad Gita, Ashtavakra Gita",
+        description: "Read the foundational texts that shape yogic and Vedantic philosophy.",
+        tags: ["Sacred Knowledge", "Ancient Wisdom", "Self-Discovery", "Inner Growth"],
+        icon: "book",
+      },
+      {
+        title: "Introduction to Chakras and Kundalini",
+        description: "Explore the subtle energy body and the awakening of Kundalini energy.",
+        tags: ["Energetic Healing", "Sacred Knowledge", "Inner Growth", "Self-Discovery"],
+        icon: "sparkles",
+      },
+      {
+        title: "Massage and Cleansing",
+        description: "Learn hands-on bodywork and cleansing techniques for holistic care.",
+        tags: ["Holistic Practice", "Total Wellness", "Energetic Healing", "Hands-On Skill"],
+        icon: "hand-heart",
+      },
+      {
+        title: "Placement assistance",
+        description: "Get structured support finding teaching opportunities after graduation.",
+        tags: ["Career Ready", "Community Care", "Structured Learning", "Continuity"],
+        icon: "briefcase",
+      },
     ],
     schedule: YTT_SCHEDULE,
     pricing: [
@@ -158,11 +244,36 @@ export const COURSES: Course[] = [
       "All participants are awarded a certificate of appreciation by Light House on successful completion.",
     ],
     highlights: [
-      "Ashtanga Vinyasa Yoga",
-      "Yoga Philosophy",
-      "Meditation and mantra chanting",
-      "Free time for contemplation and nature walks",
-      "Evening prayers",
+      {
+        title: "Ashtanga Vinyasa Yoga",
+        description: "Move through a flowing, breath-linked sequence of postures each day.",
+        tags: ["Physical Strength", "Breath Awareness", "Mind-Body Balance", "Holistic Practice"],
+        icon: "flower",
+      },
+      {
+        title: "Yoga Philosophy",
+        description: "Reflect on the deeper teachings behind the practice, at a relaxed pace.",
+        tags: ["Sacred Knowledge", "Self-Discovery", "Ancient Wisdom", "Inner Growth"],
+        icon: "book",
+      },
+      {
+        title: "Meditation and mantra chanting",
+        description: "Settle the mind through guided sitting practice and sacred sound.",
+        tags: ["Present Awareness", "Inner Growth", "Sacred Knowledge", "Total Wellness"],
+        icon: "music",
+      },
+      {
+        title: "Free time for contemplation and nature walks",
+        description: "Unhurried mornings by the Ganges, with space for stillness and reflection.",
+        tags: ["Self-Discovery", "Total Wellness", "Present Awareness", "Nature Connection"],
+        icon: "leaf",
+      },
+      {
+        title: "Evening prayers",
+        description: "Close each day with a quiet, communal prayer ceremony.",
+        tags: ["Sacred Knowledge", "Community Care", "Inner Growth", "Present Awareness"],
+        icon: "moon",
+      },
     ],
     schedule: RETREAT_SCHEDULE,
     pricing: [
@@ -195,10 +306,30 @@ export const COURSES: Course[] = [
       "All participants are awarded a certificate of appreciation by Light House on successful completion.",
     ],
     highlights: [
-      "Hatha Yoga",
-      "Evening prayers and mantra chanting",
-      "Meditation",
-      "Free time for contemplation and nature walks",
+      {
+        title: "Hatha Yoga",
+        description: "Practice slow, deliberate postures that build strength and steadiness.",
+        tags: ["Physical Strength", "Mind-Body Balance", "Holistic Practice", "Present Awareness"],
+        icon: "flower",
+      },
+      {
+        title: "Evening prayers and mantra chanting",
+        description: "Wind down each day with communal chanting and quiet devotion.",
+        tags: ["Sacred Knowledge", "Community Care", "Inner Growth", "Present Awareness"],
+        icon: "moon",
+      },
+      {
+        title: "Meditation",
+        description: "Build a steady daily sitting practice at an unhurried pace.",
+        tags: ["Present Awareness", "Inner Growth", "Self-Discovery", "Total Wellness"],
+        icon: "sun",
+      },
+      {
+        title: "Free time for contemplation and nature walks",
+        description: "Extended open mornings by the river, for stillness and reflection.",
+        tags: ["Self-Discovery", "Total Wellness", "Present Awareness", "Nature Connection"],
+        icon: "leaf",
+      },
     ],
     schedule: RETREAT_SCHEDULE,
     pricing: [
@@ -228,10 +359,30 @@ export const COURSES: Course[] = [
       "This is an optional module, subject to the Master's availability. If taken alongside YTT or YRT, your course extends by 5 days. Admission to MTC is at the Master's discretion, and independent of admission to YTT or YRT.",
     ],
     highlights: [
-      "Spontaneous Kriya Meditation",
-      "Connection with the Cosmic Light / Energy",
-      "No meditator, no effort, no psychological conflict",
-      "Personally taught by Krishnaji",
+      {
+        title: "Spontaneous Kriya Meditation",
+        description: "Enter a meditation that arises on its own, without technique or effort.",
+        tags: ["Present Awareness", "Self-Discovery", "Inner Growth", "Sacred Knowledge"],
+        icon: "sparkles",
+      },
+      {
+        title: "Connection with the Cosmic Light / Energy",
+        description: "Open to a direct experience of the Cosmic Light described by Krishnaji.",
+        tags: ["Energetic Healing", "Sacred Knowledge", "Inner Growth", "Self-Discovery"],
+        icon: "sun",
+      },
+      {
+        title: "No meditator, no effort, no psychological conflict",
+        description: "Release the sense of striving, so meditation happens by itself.",
+        tags: ["Present Awareness", "Inner Growth", "Self-Discovery", "Total Wellness"],
+        icon: "feather",
+      },
+      {
+        title: "Personally taught by Krishnaji",
+        description: "Learn directly from Light House's founder, who lives this practice daily.",
+        tags: ["Sacred Knowledge", "Ancient Wisdom", "Community Care", "Inner Growth"],
+        icon: "heart",
+      },
     ],
     pricing: [{ label: "Add-on Fee", price: "275 EUR / 299 USD" }],
     applyHref: MTC_APPLY_HREF,
@@ -254,9 +405,24 @@ export const COURSES: Course[] = [
       "The programme includes food, accommodation and optional wellness packages alongside your volunteering.",
     ],
     highlights: [
-      "Teaching and volunteering at PANKH",
-      "Food and accommodation included",
-      "Optional wellness packages",
+      {
+        title: "Teaching and volunteering at PANKH",
+        description: "Share your skills directly with students at our partner NGO school.",
+        tags: ["Service & Seva", "Community Care", "Self-Discovery", "Holistic Practice"],
+        icon: "handshake",
+      },
+      {
+        title: "Food and accommodation included",
+        description: "Stay and eat with us for the full duration of your volunteering.",
+        tags: ["Total Wellness", "Community Care", "Service & Seva", "Continuity"],
+        icon: "home",
+      },
+      {
+        title: "Optional wellness packages",
+        description: "Add on yoga, meditation or spa sessions alongside your volunteering.",
+        tags: ["Total Wellness", "Holistic Practice", "Inner Growth", "Self-Discovery"],
+        icon: "hand-heart",
+      },
     ],
     pricing: [],
   },

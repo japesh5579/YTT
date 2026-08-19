@@ -1,9 +1,10 @@
 import Image from "next/image";
 import RevealImage from "./RevealImage";
 import Reveal from "./Reveal";
-import { Timeline } from "./ui/timeline";
+import DailySchedule from "./DailySchedule";
+import CoversCarousel from "./CoversCarousel";
 import { shimmerPlaceholder } from "@/lib/placeholder";
-import { COURSES, groupScheduleByPeriod, type Course } from "@/lib/courses";
+import { COURSES, type Course } from "@/lib/courses";
 import { getNextBatchLabel } from "@/lib/calendar";
 
 /** Display order and inclusion for the homepage only — /programs/[slug] is unaffected. */
@@ -11,13 +12,6 @@ const HOMEPAGE_ORDER = ["100-hour-ytt", "200-hour-ytt", "20-day-retreat", "15-da
 
 /** Courses whose schedule is a duplicate of another course's — skip re-rendering their timeline. */
 const SCHEDULE_HIDDEN_SLUGS = ["100-hour-ytt", "20-day-retreat"];
-
-const PERIOD_ICON: Record<string, string> = {
-  Morning: "☀️",
-  Midday: "🌤️",
-  Afternoon: "🌇",
-  Evening: "🌙",
-};
 
 export default function CourseDetails() {
   const courses = HOMEPAGE_ORDER
@@ -110,22 +104,6 @@ export default function CourseDetails() {
                     </div>
                   )}
 
-                  {course.highlights.length > 0 && (
-                    <div className="mt-8 border-t border-[#22201c]/10 pt-6">
-                      <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
-                        Covers
-                      </p>
-                      <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-                        {course.highlights.map((h) => (
-                          <li key={h} className="flex items-start gap-2 text-sm text-[#22201c]">
-                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#33456a]" />
-                            <span>{h}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
                   {course.pricing.length > 0 && (
                     <div className="mt-8 border-t border-[#22201c]/10 pt-6">
                       <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
@@ -158,6 +136,24 @@ export default function CourseDetails() {
                 </div>
               </div>
 
+              {course.highlights.length > 0 && (
+                <div className="mt-12 md:mt-16">
+                  <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
+                    Covers
+                  </p>
+                  <h4 className="font-display max-w-lg text-xl font-light leading-snug md:text-2xl">
+                    What You&rsquo;ll Learn
+                  </h4>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a]">
+                    A holistic curriculum that blends ancient yogic wisdom with modern
+                    understanding, for transformation inside and out.
+                  </p>
+                  <div className="mt-8 max-w-xl md:max-w-none">
+                    <CoversCarousel items={course.highlights} />
+                  </div>
+                </div>
+              )}
+
               {showSchedule && course.schedule && (
                 <div className="mt-12 md:mt-16">
                   <p className="mb-4 text-[10px] tracking-widest-plus uppercase text-[#8a8375]">
@@ -166,30 +162,13 @@ export default function CourseDetails() {
                   <h4 className="font-display max-w-lg text-xl font-light leading-snug md:text-2xl">
                     A day at Light House
                   </h4>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-[#57534a]">
+                    A balanced blend of ancient yogic wisdom and modern science for your
+                    transformation.
+                  </p>
 
-                  <div className="mt-6">
-                    <Timeline
-                      data={groupScheduleByPeriod(course.schedule).map((group) => ({
-                        title: `${PERIOD_ICON[group.period] ?? ""} ${group.period}`.trim(),
-                        content: (
-                          <div key={group.period} className="space-y-3">
-                            {group.rows.map((row) => (
-                              <div
-                                key={row.time}
-                                className="flex min-w-0 flex-col gap-1 border-b border-[#22201c]/10 pb-3 sm:flex-row sm:items-baseline sm:gap-6"
-                              >
-                                <span className="shrink-0 text-xs tracking-widest-plus uppercase text-[#8a8375] sm:w-44">
-                                  {row.time}
-                                </span>
-                                <span className="min-w-0 text-sm text-[#22201c]">
-                                  {row.activity}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        ),
-                      }))}
-                    />
+                  <div className="mt-8 max-w-2xl">
+                    <DailySchedule schedule={course.schedule} />
                   </div>
                 </div>
               )}
